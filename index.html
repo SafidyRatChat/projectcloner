@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Project Cloner — QGIS Plugin</title>
+  <meta name="description" content="Project Cloner: clone QGIS projects including layers, styles and data into a portable ZIP." />
+  <style>
+    :root{--accent:#2b7a78;--muted:#6b7280;--bg:#fbfcfc;--card:#ffffff}
+    body{font-family:Inter, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; margin:0; background:var(--bg); color:#0f172a}
+    header{background:linear-gradient(90deg,#0ea5a4, #2563eb); color:white; padding:36px 18px}
+    .container{max-width:960px;margin:0 auto;padding:24px}
+    .hero{display:flex;gap:24px;align-items:center}
+    .hero img{width:96px;height:96px;border-radius:12px;object-fit:cover;background:white;padding:8px}
+    h1{margin:0;font-size:28px}
+    p.lead{margin:6px 0 0;color:var(--muted)}
+    .grid{display:grid;grid-template-columns:1fr 320px;gap:20px;margin-top:20px}
+    .card{background:var(--card);padding:18px;border-radius:12px;box-shadow:0 6px 18px rgba(11,14,22,0.06)}
+    .small{font-size:13px;color:var(--muted)}
+    ul{margin:8px 0 0;padding-left:18px}
+    .download-btn{display:inline-block;padding:12px 16px;border-radius:10px;background:var(--accent);color:white;text-decoration:none;font-weight:600}
+    footer{padding:24px 0;color:var(--muted);font-size:13px}
+    pre{background:#0f172a;color:#e6eef6;padding:12px;border-radius:8px;overflow:auto}
+    @media (max-width:880px){.grid{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container hero">
+      <img src="icon.png" alt="Project Cloner icon" />
+      <div>
+        <h1>Project Cloner</h1>
+        <p class="lead">Clone QGIS projects (layers, styles & data) into a portable ZIP — ready to move between machines or share.</p>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="grid">
+      <section>
+        <div class="card">
+          <h2>About</h2>
+          <p class="small">Project Cloner packages the current QGIS project file and associated data (shapefiles, GeoTIFFs, style files, etc.) into a single ZIP for backup or transfer.</p>
+
+          <h3 style="margin-top:16px">Key Features</h3>
+          <ul>
+            <li>Auto-detects project file and suggests a timestamped ZIP filename</li>
+            <li>Option to include or exclude layer data files</li>
+            <li>Preserves layer styles and project settings</li>
+            <li>Simple UI with progress and status messages</li>
+          </ul>
+
+          <h3 style="margin-top:16px">Install</h3>
+          <ol>
+            <li>Download the latest <strong>ZIP</strong> from Releases or use the QGIS Plugin Manager.</li>
+            <li>Unzip to your QGIS plugins folder (usually <code>~/.local/share/QGIS/QGIS3/profiles/default/python/plugins/</code> on Linux).</li>
+            <li>Restart QGIS and enable <strong>Project Cloner</strong> from the Plugin Manager.</li>
+          </ol>
+
+          <h3 style="margin-top:16px">Usage</h3>
+          <p class="small">Open the plugin from the Plugins toolbar. Choose where to save the cloned ZIP, select whether to include data files, and click <em>Clone Project</em>. If your public IP resolves to Madagascar, you'll see a Malagasy greeting.</p>
+
+          <h3 style="margin-top:16px">Metadata (for QGIS repo)</h3>
+          <pre>[general]
+name=Project Cloner
+qgisMinimumVersion=3.0
+qgisMaximumVersion=3.99
+version=1.0
+author=Safidy Ratolonandrasana
+email=sakalahymaha@gmail.com
+about=Clone QGIS projects including layers, styles and data into a portable ZIP
+homepage=https://github.com/REPLACE_WITH_YOUR_REPO
+repository=https://github.com/REPLACE_WITH_YOUR_REPO
+tracker=https://github.com/REPLACE_WITH_YOUR_REPO/issues
+</pre>
+
+          <h3 style="margin-top:12px">License</h3>
+          <p class="small">MIT — copy, modify and distribute. Please keep author attribution.</p>
+        </div>
+
+        <div class="card" style="margin-top:16px">
+          <h3>Support & Contact</h3>
+          <p class="small">Author: <strong>Safidy Ratolonandrasana</strong></p>
+          <p class="small">Email: <a href="mailto:sakalahymaha@gmail.com">sakalahymaha@gmail.com</a></p>
+          <p class="small">Report issues on the GitHub repository tracker.</p>
+        </div>
+      </section>
+
+      <aside>
+        <div class="card">
+          <h3>Download</h3>
+          <p class="small">Get the latest release ZIP and upload-ready plugin package.</p>
+          <p style="margin-top:10px"><a class="download-btn" href="#">Download ZIP</a></p>
+
+          <h4 style="margin-top:18px">Quick Install (zip)</h4>
+          <ol class="small">
+            <li>Open QGIS → Plugins → Manage and Install Plugins → Install from ZIP.</li>
+            <li>Choose the downloaded ZIP and install.</li>
+          </ol>
+
+          <h4 style="margin-top:16px">Repository</h4>
+          <p class="small">Host this project on GitHub. Use <code>docs/</code> folder or <code>gh-pages</code> branch to serve this page with GitHub Pages.</p>
+
+          <h4 style="margin-top:16px">Preview</h4>
+          <p class="small">Place <code>index.html</code> into <code>docs/</code> (or gh-pages) and push to GitHub to enable Pages in repo settings.</p>
+        </div>
+
+        <div class="card" style="margin-top:16px">
+          <h4>Quick Commands</h4>
+          <pre class="small"># create docs site
+mkdir docs
+cp index.html docs/
+# push to GitHub
+git add docs/index.html
+git commit -m "Add GitHub Pages site"
+git push origin main</pre>
+        </div>
+      </aside>
+    </div>
+
+    <footer style="margin-top:26px">
+      <div class="small">© 2025 Safidy Ratolonandrasana • Project Cloner — Built for QGIS users</div>
+    </footer>
+  </main>
+</body>
+</html>
