@@ -1,0 +1,5 @@
+<RCC>
+  <qresource prefix="/plugins/project_cloner">
+    <file>icon.png</file>
+  </qresource>
+</RCC>

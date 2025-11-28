@@ -1,0 +1,24 @@
+[general]
+name=Project Cloner
+qgisMinimumVersion=3.0
+qgisMaximumVersion=3.99
+version=1.0
+author=Safidy Ratolonandrasana
+email=sakalahymaha@gmail.com
+description=Clone QGIS projects with layers, styles, and data in a portable ZIP.
+about=This plugin allows you to fully duplicate and export any QGIS project, including paths, layer styles, raster/vector datasets, and configuration settings. Useful for backups, sharing, or migrating projects across machines.
+category=Plugins
+icon=icon.png
+homepage=https://github.com/safidyrolonandrasana/ProjectCloner     # change if needed
+repository=https://github.com/safidyrolonandrasana/ProjectCloner   # required
+tracker=https://github.com/safidyrolonandrasana/ProjectCloner/issues  # required
+changelog=Initial release.
+
+# optional but recommended fields
+tags=clone,export,backup,project,qgis,zip,data
+experimental=False
+deprecated=False
+preview=True
+
+[server]
+server=False
